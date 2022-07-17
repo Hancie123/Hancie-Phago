@@ -1,0 +1,20 @@
+CREATE TABLE users (User_ID int(11) PRIMARY KEY AUTO_INCREMENT, Name varchar(255) NOT NULL, DOB varchar(255) NOT NULL, Mobile varchar(255) NOT NULL, Email varchar(255) NOT NULL, Address varchar(255) NOT NULL, Password varchar(255) NOT NULL);
+
+CREATE TABLE notes (Note_ID int(11) PRIMARY KEY AUTO_INCREMENT, Title varchar(255), Notes text, User_ID int(11), FOREIGN KEY(User_ID) REFERENCES users(User_ID));
+
+CREATE TABLE password (Password_ID int(11) PRIMARY KEY AUTO_INCREMENT, URL varchar(255), Category varchar(255), Account varchar(255), Password varchar(255), User_ID int(11), FOREIGN KEY(User_ID) REFERENCES users (User_ID));
+
+CREATE TABLE contact (Contact_ID int(12) PRIMARY KEY AUTO_INCREMENT, Name varchar(255), Gender varchar(255), DOB varchar(255), Mobile varchar(255), Email varchar(255), Address varchar(255),User_ID int(11), FOREIGN KEY(User_ID) REFERENCES users (User_ID));
+
+CREATE TABLE daily_expenses (Expenses_ID int(11) PRIMARY KEY AUTO_INCREMENT, date varchar(255), amount bigint(20), category varchar(255), remark varchar(255), User_ID int(11), Foreign Key(User_ID) References users(User_ID), date2 datetime);
+
+CREATE TABLE loan (Loan_ID int(11) PRIMARY KEY AUTO_INCREMENT, Date varchar(255), Giver_Name varchar(255), Receiver_Name varchar(255), Amount bigint(20), remark varchar(255), Status varchar(255), User_ID int(11), Foreign Key(User_ID) REFERENCES users (User_ID), date2 datetime);
+
+CREATE TABLE saving (Saving_ID int(11) PRIMARY KEY AUTO_INCREMENT, Date varchar(255), Amount bigint(20), Income_Source varchar(255), Remark varchar(255), User_ID int(11), FOREIGN KEY(User_ID) REFERENCES users(User_ID));
+
+
+CREATE TABLE `events` ( `id` int(11) PRIMARY KEY AUTO_INCREMENT, `title` varchar(255) NOT NULL, `start_event` datetime NOT NULL, `end_event` datetime NOT NULL, User_ID int(11), FOREIGN KEY(User_ID) REFERENCES users(User_ID));
+
+CREATE TABLE projects (Project_ID int(11) PRIMARY KEY AUTO_INCREMENT, date varchar(255), title varchar(255), category varchar(255),progress varchar(255), status varchar(255), User_ID int(11), FOREIGN KEY(User_ID) REFERENCES users(User_ID));
+
+

@@ -1,0 +1,84 @@
+body {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 14px;
+	font-family: "Helvetica Nueue", Arial, Verdana, sans-serif;
+	background-color: #DDDDDD;
+}
+#wrap {
+	width: 1100px;
+	margin: 0 auto;
+}
+#external-events {
+	float: left;
+	width: 150px;
+	padding: 0 10px;
+	text-align: left;
+}
+#external-events h4 {
+	font-size: 16px;
+	margin-top: 0;
+	padding-top: 1em;
+}
+.external-event {
+	margin: 10px 0;
+	padding: 2px 4px;
+	background: #3366CC;
+	color: #fff;
+	font-size: .85em;
+	cursor: pointer;
+}
+#external-events p {
+	margin: 1.5em 0;
+	font-size: 11px;
+	color: #666;
+}
+#external-events p input {
+	margin: 0;
+	vertical-align: middle;
+}
+#event_calendar {
+	margin: 0 auto;
+	width: 900px;
+	background-color: #FFFFFF;
+	border-radius: 6px;
+	box-shadow: 0 1px 2px #C3C3C3;
+}
+.fc-toolbar.fc-header-toolbar {
+	padding: 10px;
+}
+.fc-button-group button {
+	border-color: #5a45ff;
+	color: #5a45ff;
+	background: none;
+	box-shadow: none;
+	text-transform: capitalize;
+}
+.fc-day-grid-event .fc-content,
+.fc-time-grid-event.fc-short .fc-content {
+	white-space: nowrap;
+	overflow: hidden;
+	background: #5a45ff;
+	color: #ffffff;
+	padding: 4px;
+}
+.fc-toolbar .fc-state-active,
+.fc-toolbar .ui-state-active {
+	background: #5a45ff;
+	color: #FFF;
+}
+.fc-today-button {
+	background: #2a2a2f;
+	color: #fff;
+	opacity: 1;
+	text-transform: capitalize;
+}
+.fc-basic-view .fc-week-number,
+.fc-basic-view .fc-day-number {
+	padding: 15px;
+}
+.fc-event,
+.fc-event-dot {
+	background-color: #5a45ff;
+	border: none;
+}
