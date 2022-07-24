@@ -18,14 +18,14 @@
 
 <nav class="navbar navbar-expand-sm bg-success navbar-dark">
   <div class="container-fluid">
-    <a id="item1" class="navbar-brand" href="index">NH Online Dictionary</a>
+    <a id="item1" class="navbar-brand" href="https://nh-online-dictionary.hancie-phago.com.np/">NH Online Dictionary</a>
     <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="justify-content-end collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a id="item"   class="nav-link text-light" href="index"><i class="bi bi-house-fill"></i> Home</a>
+          <a id="item"   class="nav-link text-light" href="https://nh-online-dictionary.hancie-phago.com.np/"><i class="bi bi-house-fill"></i> Home</a>
         </li>
         <li class="nav-item">
           <a id="item" class="nav-link text-light" href="#"><i class="bi bi-spellcheck"></i> Grammer</a>
