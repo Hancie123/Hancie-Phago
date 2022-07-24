@@ -8,6 +8,7 @@
                     <li><a href="index">Home</a></li>
                     <li><a href="">Services</a></li>
                     <li><a href="">About</a></li>
+                    <li><a href="NH_Nepali_Dictionary">Dictionary</a></li>
                     <li><a href="Contact_Us">Contact</a></li>
                     <li><a href="Login">Login</a></li>
                 </ul>

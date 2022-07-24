@@ -101,6 +101,7 @@
                                 <div class="nav__dropdown-collapse">
                                     <div class="nav__dropdown-content">
                                         <a href="Backup_Database" class="nav__dropdown-item"><i class='bx bx-data nav__icon' ></i>Backup Database</a>
+                                        <a href="NH_Online_Dictionary" class="nav__dropdown-item"><i class="bi bi-book nav__icon"></i>NH Online Dictionary</a>
                                         
                                     </div>
                                 </div>
