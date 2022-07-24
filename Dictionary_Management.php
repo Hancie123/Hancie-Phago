@@ -29,11 +29,6 @@ header("Location:Login.php");
 <body>
 <br>
 <div class="w3-card-4">
-
-<div class="w3-container bg-success text-light">
-  <h2 class="text-center">NH Online Dictionary</h2>
-</div>
-<br>
 <?php
 if(isset($_POST['search']))
 {
@@ -52,7 +47,7 @@ if(isset($_POST['search']))
 // function to connect and execute the query
 function filterTable($query)
 {
-    $connect = mysqli_connect("localhost", "root", "", "hancie");
+    $connect = mysqli_connect("sql305.epizy.com", "epiz_32019522", "SV8RhBMBuDJxb", "epiz_32019522_hancie");
     $filter_Result = mysqli_query($connect, $query);
     return $filter_Result;
 }
@@ -94,12 +89,13 @@ function filterTable($query)
 <h3><?php echo $row['Meaning'];?></h3>
 </div>
 
-
 <br>
-<div class="w3-container text-light bg-success">
-  <h5>Designed by Hancie Phago</h5>
-  </div>
-
+<br>
+<form action="Edit_Meaning.php" method="post" class="mx-2">
+<input type="hidden" value="<?php echo $row['Meaning_ID']; ?> " name="id">
+<button name="edit" class="btn btn-success"><i class="bi bi-pencil-square"></i> Update Meaning</button>
+</form>
+<br>
 </div>
 
 

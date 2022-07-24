@@ -43,7 +43,6 @@ header("Location:Login.php");
 
 </tr>
 </thead>
-<tbody>
 <?php
 include "connection.php";
 
@@ -61,7 +60,7 @@ while ($row=mysqli_fetch_array($query)) {
   <td> <?php echo $row['Title'];?></td>
   <td><p> <?php echo $row['Notes'];?><p></td>
   
-<th>
+<td>
 <div class="input-group">
 
 <form action="Edit_Notes" method="post">
@@ -75,15 +74,17 @@ while ($row=mysqli_fetch_array($query)) {
 </form>
 
 </div>
-</th>
+</td>
 </tr>
-</tbody>
+
 <?php  
 }
 ?>
 
 </table>
 </div>
+
+
 <script>
   $(document).ready(function () {
     $('#hancie').DataTable();
