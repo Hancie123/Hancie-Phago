@@ -16,8 +16,9 @@
                     <h3 class="fs-6 text-white">About</h3>
                     <ul class="list-unstyled">
                         <li><a class="link-light" href="Privacy_Policy">Privacy Policy</a></li>
+                        <li><a class="link-light" href="About">About</a></li>
                         <li><a class="link-light" href="Contact_Us">Contact Us</a></li>
-                        <li><a class="link-light" href="https://hancie-phago.com.np/index">Home</a></li>
+                        <li><a class="link-light" href="Suggest_Words">Suggest Words</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">

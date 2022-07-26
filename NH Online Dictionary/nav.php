@@ -1,6 +1,6 @@
 <style>
 #item {
-    font-size: 1.67em;
+    font-size: 1.27em;
     
 }
 
@@ -34,9 +34,9 @@
           <a id="item" class="nav-link text-light" href="Suggest_Words"><i class="bi bi-chat-right-fill"></i> Suggest Words</a>
         </li>  
         <li class="nav-item dropdown">
-          <a id="item" class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"><i class="bi bi-person-circle"></i> About</a>
+          <a id="item" class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"><i class="bi bi-person-circle"></i> More</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#"><i class="bi bi-people"></i> About Us</a></li>
+            <li><a class="dropdown-item" href="About"><i class="bi bi-people"></i> About</a></li>
             <li><a class="dropdown-item" href="Privacy_Policy"><i class="bi bi-clipboard2"></i> Policy</a></li>
             <li><a class="dropdown-item" href="Contact_Us"><i class="bi bi-person-rolodex"></i> Contact Us</a></li>
           </ul>
