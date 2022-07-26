@@ -17,6 +17,7 @@
                     <ul class="list-unstyled">
                         <li><a class="link-light" href="Privacy_Policy">Privacy Policy</a></li>
                         <li><a class="link-light" href="About">About</a></li>
+                        <li><a class="link-light" href="Developers">Developers</a></li>
                         <li><a class="link-light" href="Contact_Us">Contact Us</a></li>
                         <li><a class="link-light" href="Suggest_Words">Suggest Words</a></li>
                     </ul>
