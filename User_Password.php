@@ -31,7 +31,7 @@ header("Location:Login.php");
             <div class="card-body">
                 <form  action="function_password.php" method="post">
                     <div class="form-group row text-left">
-                      <div class="col-sm-3 text-primary">
+                      <div class="col-sm-3 text-success">
                         <h5>
                           Admin ID:<br>
                         </h5>
@@ -43,7 +43,7 @@ header("Location:Login.php");
                       </div>
                     </div>
                     <div class="form-group row text-left">
-                      <div class="col-sm-3 text-primary">
+                      <div class="col-sm-3 text-success">
                         <h5>
                           Current Password:<br>
                         </h5>
@@ -56,7 +56,7 @@ header("Location:Login.php");
                     </div>
 
                     <div class="form-group row text-left">
-                      <div class="col-sm-3 text-primary">
+                      <div class="col-sm-3 text-success">
                         <h5>
                           New Password:<br>
                         </h5>
@@ -70,7 +70,7 @@ header("Location:Login.php");
                    
 
                     <div class="form-group row text-left">
-                      <div class="col-sm-3 text-primary">
+                      <div class="col-sm-3 text-success">
                         <h5>
                           Confirm Password:<br>
                         </h5>

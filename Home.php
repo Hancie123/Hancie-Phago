@@ -40,7 +40,7 @@ header("Location:Login.php");
 
     <!-- One Container -->
   <div class="w3-container  w3-cell w3-mobile">
-  <i class='bx bx-chat bx-lg' ></i>
+  <i class='bx bxs-key bx-lg' ></i>
   </div>
 
   <div class="w3-container w3-cell w3-mobile"><h2>Total Passwords:</h2>
@@ -60,7 +60,7 @@ header("Location:Login.php");
     </div>
 
     <footer class="w3-container bg-success">
-      <a href="" class="text-center text-light ">View <i class='bx bxs-right-arrow-circle' ></i></a>
+      <a href="Manage_Passwords" class="text-center text-light ">View <i class='bx bxs-right-arrow-circle' ></i></a>
     </footer>
   </div>
 </div>
@@ -78,7 +78,7 @@ header("Location:Login.php");
 
     <!-- One Container -->
   <div class="w3-container  w3-cell w3-mobile">
-  <i class='bx bx-chat bx-lg' ></i>
+  <i class='bx bxs-message-dots bx-lg' ></i>
   </div>
 
   <div class="w3-container w3-cell w3-mobile"><h2>Total Messages:</h2>
@@ -97,7 +97,7 @@ header("Location:Login.php");
     </div>
 
     <footer class="w3-container bg-success">
-      <a href="" class="text-center text-light">View <i class='bx bxs-right-arrow-circle' ></i></a>
+      <a href="Message_Inbox" class="text-center text-light">View <i class='bx bxs-right-arrow-circle' ></i></a>
     </footer>
   </div>
 </div>
@@ -105,7 +105,7 @@ header("Location:Login.php");
 <div class="w3-container w3-cell w3-mobile mb-3">
 <div class="w3-card-4">
     <header class="w3-container bg-success">
-      <h2 class="text-light">Admin</h2>
+      <h2 class="text-light">Views</h2>
     </header>
 
     <div class="w3-container py-3">
@@ -114,13 +114,13 @@ header("Location:Login.php");
 
     <!-- One Container -->
   <div class="w3-container  w3-cell w3-mobile">
-  <i class='bx bx-chat bx-lg' ></i>
+  <i class='bx bxl-discord-alt bx-lg'></i>
   </div>
 
-  <div class="w3-container w3-cell w3-mobile"><h2>Total Admins:</h2>
+  <div class="w3-container w3-cell w3-mobile"><h2>Total Views:</h2>
   <?php 
     include "connection.php";
-    $query = "SELECT COUNT(User_ID) FROM users";
+    $query = "SELECT COUNT(id) FROM visitor_logs";
      $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
      while ($row = mysqli_fetch_array($result)) {
       echo "<h1> $row[0] </h1>";
@@ -133,7 +133,7 @@ header("Location:Login.php");
     </div>
 
     <footer class="w3-container bg-success">
-      <a href="" class="text-center text-light">View <i class='bx bxs-right-arrow-circle' ></i></a>
+      <a href="Activity_Log" class="text-center text-light">View <i class='bx bxs-right-arrow-circle' ></i></a>
     </footer>
   </div>
 </div>
@@ -151,7 +151,7 @@ header("Location:Login.php");
 
     <!-- One Container -->
   <div class="w3-container  w3-cell w3-mobile">
-  <i class='bx bx-chat bx-lg' ></i>
+  <i class='bx bxs-contact bx-lg' ></i>
   </div>
 
   <div class="w3-container w3-cell w3-mobile"><h2>Total Contacts:</h2>
@@ -171,7 +171,7 @@ header("Location:Login.php");
     </div>
 
     <footer class="w3-container bg-success">
-      <a href="" class="text-center text-light">View <i class='bx bxs-right-arrow-circle' ></i></a>
+      <a href="Search_Contacts" class="text-center text-light">View <i class='bx bxs-right-arrow-circle' ></i></a>
     </footer>
   </div>
 </div>
@@ -297,7 +297,7 @@ Row Close -->
     </div>
 
     <footer class="w3-container bg-success">
-      <a href="" class="text-center text-light ">View <i class='bx bxs-right-arrow-circle' ></i></a>
+      <a href="Expenses_report" class="text-center text-light ">View <i class='bx bxs-right-arrow-circle' ></i></a>
     </footer>
   </div>
 </div>
@@ -335,7 +335,7 @@ Row Close -->
     </div>
 
     <footer class="w3-container bg-success">
-      <a href="" class="text-center text-light">View <i class='bx bxs-right-arrow-circle' ></i></a>
+      <a href="Expenses_report" class="text-center text-light">View <i class='bx bxs-right-arrow-circle' ></i></a>
     </footer>
   </div>
 </div>
@@ -372,7 +372,7 @@ Row Close -->
     </div>
 
     <footer class="w3-container bg-success">
-      <a href="" class="text-center text-light">View <i class='bx bxs-right-arrow-circle' ></i></a>
+      <a href="Loan_Borrow" class="text-center text-light">View <i class='bx bxs-right-arrow-circle' ></i></a>
     </footer>
   </div>
 </div>
@@ -410,7 +410,7 @@ Row Close -->
     </div>
 
     <footer class="w3-container bg-success">
-      <a href="" class="text-center text-light">View <i class='bx bxs-right-arrow-circle' ></i></a>
+      <a href="Saving" class="text-center text-light">View <i class='bx bxs-right-arrow-circle' ></i></a>
     </footer>
   </div>
 </div>

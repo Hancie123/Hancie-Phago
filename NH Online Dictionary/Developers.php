@@ -4,7 +4,7 @@
 <link rel="icon" href="Images/Logo.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Developers</title>
+    <title>NH Online DictionaryDevelopers</title>
     <link rel="icon" href="logo.ico">
     <meta name="description" content="Hancie Phago Personal Website">
     <meta name="keywords" content="Hancie Phago, Hancie, Phago, Nitesh Hamal, NH Online Dictionary">
