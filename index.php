@@ -1,24 +1,3 @@
-<?php 
- 
-// Include the database configuration file 
-include_once 'connection.php'; 
- 
-// Get current page URL 
-$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://"; 
-$currentURL = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . $_SERVER['QUERY_STRING']; 
- 
-// Get server related info 
-$user_ip_address = $_SERVER['REMOTE_ADDR']; 
-$referrer_url = !empty($_SERVER['HTTP_REFERER'])?$_SERVER['HTTP_REFERER']:'/'; 
-$user_agent = $_SERVER['HTTP_USER_AGENT']; 
- 
-// Insert visitor log into database 
-$sql = "INSERT INTO visitor_logs (page_url, referrer_url, user_ip_address, user_agent, created) VALUES (?,?,?,?,NOW())"; 
-$stmt = $conn->prepare($sql); 
-$stmt->bind_param("ssss", $currentURL, $referrer_url, $user_ip_address, $user_agent); 
-$insert = $stmt->execute(); 
- 
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +29,7 @@ $insert = $stmt->execute();
             <p>Love to learn programming languages.</p>
             <p>Also love to build different platform softwares.</p> <button>Know More About ME</button>
         </div> <img src=Images/Hancie-Logo.png />
-        <div class="Social-media"> <i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> <i class="fab fa-linkedin-in"></i> </div>
+        <div class="Social-media"> <a href="https://www.facebook.com/hanciephago720/"><i class="fab fa-facebook-f"></i></a> <a href="https://twitter.com/hancie_phago"><i class="fab fa-twitter"></i></a> <a href="https://www.instagram.com/hancie720/"><i class="fab fa-instagram"></i></a> <a href="https://www.linkedin.com/in/hancie-phago-b4681a150/"><i class="fab fa-linkedin-in"></i></a> <a href="https://github.com/Hancie123"><i class="fab fa-github"></i></a> </div>
     </div>
 
 

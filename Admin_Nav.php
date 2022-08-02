@@ -102,7 +102,7 @@
                                     <div class="nav__dropdown-content">
                                         <a href="Backup_Database" class="nav__dropdown-item"><i class='bx bx-data nav__icon' ></i>Backup Database</a>
                                         <a href="Activity_Log" class="nav__dropdown-item"><i class="bi bi-arrow-left-right nav__icon"></i>Activity Logs</a>
-                                        <a href="Everyday_Quotes" class="nav__dropdown-item"><i class="bi bi-chat-square-quote nav__icon"></i></i>Daily Quotes</a>
+                                        <a href="Application_Dashboard" class="nav__dropdown-item"><i class="bi bi-window nav__icon"></i>Applications</a>
                                         <a href="NH_Online_Dictionary" class="nav__dropdown-item"><i class="bi bi-book nav__icon"></i>NH Online Dictionary</a>
                                         
                                     </div>

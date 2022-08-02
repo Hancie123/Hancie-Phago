@@ -7,7 +7,7 @@
                 <ul>
                     <li><a href="index">Home</a></li>
                     <li><a href="">Services</a></li>
-                    <li><a href="">About</a></li>
+                    <li><a href="About">About</a></li>
                     <li><a href="https://nh-online-dictionary.hancie-phago.com.np/">Dictionary</a></li>
                     <li><a href="Contact_Us">Contact</a></li>
                     <li><a href="Login">Login</a></li>
