@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body oncontextmenu="return false">
    <?php include "Nav.php"?>
 
 
@@ -298,7 +298,7 @@ html{
 
 
 
-<br>
+
 
 
 

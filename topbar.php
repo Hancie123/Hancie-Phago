@@ -13,9 +13,10 @@
 
 <!-- Income dropdown nav -->
 <div class="w3-dropdown-hover ">
-<button class="w3-button text-light w3-padding-large">Income<i class="fa fa-caret-down"></i></button>
+<button class="w3-button text-light w3-padding-large">Banking<i class="fa fa-caret-down"></i></button>
 <div class="w3-dropdown-content w3-bar-block bg-success w3-border">
-<a href="Saving" class="w3-bar-item w3-button w3-mobile text-light"><i class="bi bi-cash-coin"></i> Saving</a>
+<a href="Saving" class="w3-bar-item w3-button w3-mobile text-light"><i class="bi bi-cash-coin"></i> Deposit</a>
+<a href="Withdraw" class="w3-bar-item w3-button w3-mobile text-light"><i class="bi bi-cash-coin"></i> Withdraw</a>
 
 </div>
 </div>

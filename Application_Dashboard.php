@@ -99,17 +99,37 @@ header("Location:Login.php");
 <br>
 
 
-
-
-
-
-
-
-
-
-</div>
+<!-- First Row Close -->
+</div> 
 </div>
 <br>
+
+<!-- Second Row Open -->
+<div class="w3-cell-row">
+
+
+  <div class="w3-container w3-cell w3-mobile " >
+<div class="w3-card-4 pt-4 w3-margin-left" style="max-width:20rem">
+  <div class="w3-cell-row pb-3">
+  <div class="w3-container w3-cell w3-mobile">
+    <img src="Images/Encryption.png" alt="Alps">
+</div>
+<div class="w3-container">
+      <h2>Encrypt Decrypt</h2>
+    </div>   
+  </div>
+  <footer class="w3-container bg-success">
+      <a href="Encrypter_Decrypter" class="text-center text-light "><h5>Open</h5></a>
+    </footer>
+</div>
+</div>
+
+</div>
+
+<br>
+
+
+
 </div>
 <br>
 

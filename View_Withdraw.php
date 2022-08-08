@@ -77,7 +77,7 @@ if(isset($_POST['view'])){
 <div class="w3-container w3-cell w3-mobile">
 
 <label class="form-label h5" for="amount">Amount:</label>
-<label  class="form-label h5" name="amount"><?php echo $row['2'];?></label> 
+<label  class="form-label h5" name="amount"><?php echo $row['3'];?></label> 
 <br>
 <br>
 <label class="form-label h5" for="status">Remarks:</label>

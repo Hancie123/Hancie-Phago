@@ -139,37 +139,58 @@ h1 {
 <br>
 
      
-<?php while($row = mysqli_fetch_array($search_result)):?>
-    <div class="w3-card-4">
+<?php 
 
-<div class="w3-container  text-light bg-success">
-  <h2>Word: <?php echo $row['Words'];?></h2>
-</div>
-<br>
+
+if($row = mysqli_fetch_array($search_result)) { ?>
+
+  <div class="w3-card-4">
+
+  <div class="w3-container  text-light bg-success">
+    <h2>Word: <?php echo $row['Words'];?></h2>
+  </div>
+  <br>
+  <div class="w3-container text-center">
+  <h3>English Meaning</h3>
+  <br>
+  <h4><?php echo $row['Meaning'];?></h4>
+  
+  
+   </div>
+  
+  
+  <br>
+  <div class="w3-container text-light bg-success">
+    <h5>Designed by Hancie Phago</h5>
+  </div>
+  
+  </div>
+  <br>
+  
+  
+  
+  
+  
+  
+
+
+<?php } else  { ?>
+
+  
 <div class="w3-container text-center">
-<h3>English Meaning</h3>
-<br>
-<h4><?php echo $row['Meaning'];?></h4>
-
-
- </div>
-
-
-<br>
-<div class="w3-container text-light bg-success">
-  <h5>Designed by Hancie Phago</h5>
+  <h2>Sorry, no results in the Dictionary.</h2>
+  <p>Is this a new word that you would like to suggest is added to the NH Online Dictionary?</p>
+  <a href="Suggest_Words">Click to suggest words</a>
 </div>
 
+
+<?php } ?>
+  
+<br>  
+
+    
 </div>
-<br>
-
-
-<?php endwhile;?>
-
-</div>
-    </section>
-
-
+</section>
 
 <script type="text/javascript">
 

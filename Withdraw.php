@@ -28,6 +28,7 @@ header("Location:Login.php");
 </head>
 <body>
 
+
 <div class="bg-success w3-hover-shadow w3-padding-64 w3-center my-2 rounded">
    <label class="text-light h4" >Current Balance:</label>
 
@@ -45,11 +46,10 @@ header("Location:Login.php");
       ?>
   </div>
 
-
 <div class="w3-card-4">
 
 <div class="w3-container bg-success text-light">
-  <h2>Saving Amounts</h2>
+  <h2>Withdraw Amounts</h2>
 </div>
 <br>
 
@@ -65,15 +65,20 @@ header("Location:Login.php");
 <br>
 
 
-<label class="form-label" for="category">Income Source:</label><br>
-<select class="form-control" name="income" id="income">
+<label class="form-label" for="category">Expenditure Category:</label><br>
+<select class="form-control" name="withdraw1" id="withdraw">
     <option></option>
-    <option>Job</option>
-    <option>By Parent</option>
-    <option>Relatives</option>
-    <option>Loan</option>
-    <option>Borrow</option>
-    <option>Friends</option>
+    <option>Kitchen</option>
+    <option>Restaurant</option>
+    <option>Shopping</option>
+    <option>Transportation</option>
+    <option>Fruits</option>
+    <option>Vegetables</option>
+    <option>Furniture</option>
+    <option>College</option>
+    <option>Personal</option>
+    <option>Hospital</option>
+    <option>Vehicles</option>
   </select>
   <br>
 
@@ -91,7 +96,7 @@ header("Location:Login.php");
 </div>
 </div>
 
-<input type="submit" name="submit" value="Save" class="btn btn-success mb-3">
+<input type="submit" name="withdraw" value="Withdraw Amount" class="btn btn-success mb-3 mx-2">
 
 
 </form>
@@ -123,7 +128,7 @@ header("Location:Login.php");
 <th>ID</th>
 <th>Date</th>
 <th>Category</th>
-<th>Amount</th>
+<th>Withdraw Amount</th>
 <th>Remark</th>
 <th>View</th>
 <th>Delete</th>
@@ -136,7 +141,7 @@ include "connection.php";
 
 $id=$_SESSION['id'];
 
-$sql="SELECT * FROM saving  WHERE User_ID='$id' and Status='Deposit'";
+$sql="SELECT * FROM saving  WHERE User_ID='$id' and Status='Withdraw'";
 
 $query=mysqli_query($conn, $sql);
 
@@ -147,13 +152,13 @@ while ($row=mysqli_fetch_array($query)) {
   <td> <?php echo $row['Saving_ID']?></td>
   <td> <?php echo $row['Date']?></td>
   <td> <?php echo $row['Income_Source']?></td>
-  <td> <?php echo $row['Amount']?></td>
+  <td> <?php echo $row['Withdraw']?></td>
   <td> <?php echo $row['Remark']?></td>
 
 
 <th>
 <div class="input-group">
-<form action="View_Saving.php" method="post">
+<form action="View_Withdraw" method="post">
 <input type="hidden" value="<?php echo $row['Saving_ID']; ?> " name="id">
 <input type="submit"  name="view" value="View" class="btn btn-success">
 </form>
@@ -165,7 +170,7 @@ while ($row=mysqli_fetch_array($query)) {
 <div class="input-group">
 <form action="function_saving.php" method="post">
 <input type="hidden" value="<?php echo $row['Saving_ID']; ?> " name="id">
-<input type="submit"  name="delete" value="Delete" class="btn btn-success">
+<input type="submit"  name="delete1" value="Delete" class="btn btn-success">
 </form>
 
 </div>
