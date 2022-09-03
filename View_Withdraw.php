@@ -68,7 +68,7 @@ if(isset($_POST['view'])){
 <br>
 
 
-<label class="form-label h5" for="firstname">Income Source:</label>
+<label class="form-label h5" for="firstname">Category:</label>
 <label  class="form-label h5" name="receiver"><?php echo $row['4'];?></label> 
 <br>
 <br>

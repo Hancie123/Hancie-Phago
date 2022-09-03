@@ -125,11 +125,15 @@ header #bar-animation span::after {
     position: relative;
     min-height: 100vh;
     width: 100%;
-    background-color: #292929;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #E6E7E8;
+}
+
+.home h1 {
+    color:black;
 }
 
 .home .details {
@@ -286,9 +290,9 @@ header #bar-animation span::after {
 }
 
 .contact {
-    min-height: 100vh;
+    min-height: 85vh;
     width: 100%;
-    background-color: #333333;
+    background-color:#fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -298,7 +302,6 @@ header #bar-animation span::after {
 .contact .contact-heading {
     color: #E6E7E8;
     font-size: 25px;
-    font-weight: 1000;
     margin-bottom: 30px;
 }
 
@@ -553,7 +556,7 @@ html{
 
 .card-section-imagia {
     padding: 60px 0 30px;
-    background: #f1f1f1;
+    background: #fff;
   }
   
   .card-section-imagia > h1 {
@@ -725,5 +728,77 @@ html{
       z-index: 5;
       visibility: visible;
     }
+  }
+  
+
+  /* Services CSS */
+
+  .services2 .icon-box {
+    padding: 60px 30px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 2px 0 35px 0 rgba(68, 88, 144, 0.12);
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    z-index: 1;
+    text-align: center;
+  }
+  
+  .services2 .icon-box::before {
+    content: '';
+    position: absolute;
+    background: #fdeff2;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 100%;
+    transition: all 0.4s;
+    z-index: -1;
+  }
+  
+  .services2 .icon-box:hover::before {
+    background: #e43c5c;
+    top: 0;
+    border-radius: 0px;
+  }
+  
+  .services2 .icon {
+    margin-bottom: 15px;
+  }
+  
+  .services2 .icon i {
+    font-size: 48px;
+    line-height: 1;
+    color: #e43c5c;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .services2 .title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .services2 .title a {
+    color: #111;
+  }
+  
+  .services2 .description {
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 0;
+  }
+  
+  .services2 .icon-box:hover .title a, .services2 .icon-box:hover .description {
+    color: #fff;
+  }
+  
+  .services2 {
+    padding-bottom: 30px;
+  }
+  
+  .services2 .icon-box:hover .icon i {
+    color: #fff;
   }
   

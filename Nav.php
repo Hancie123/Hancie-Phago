@@ -6,7 +6,7 @@
             <div class="menu">
                 <ul>
                     <li><a href="https://hancie-phago.com.np/">Home</a></li>
-                    <li><a href="">Services</a></li>
+                    <li><a href="https://blog.hancie-phago.com.np/">Blog</a></li>
                     <li><a href="About">About</a></li>
                     <li><a href="https://nh-online-dictionary.hancie-phago.com.np/">Dictionary</a></li>
                     <li><a href="Contact_Us">Contact</a></li>

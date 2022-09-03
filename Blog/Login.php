@@ -28,7 +28,7 @@ $_SESSION['address'] =$row['Address'];
 $_SESSION['password'] =$row['Password'];
 
 
-header("Location: Home");
+header("Location: Blog_Management");
 
 
 
@@ -64,7 +64,7 @@ else{
 
 </head>
 
-<body oncontextmenu="return false">
+<body>
    <?php include "Nav.php"?>
 
 <style>
@@ -304,21 +304,47 @@ html{
 
 </style>
 
+
+    
+
+    <!-- <section  class="position-relative py-4 py-xl-5">
+        <div id="home" class="container">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2>Log in</h2>
+                    <p class="w-lg-50">Please enter your email and password!</p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 col-xl-4">
+                    <div class="card mb-5">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary bs-icon my-4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
+                                </svg></div>
+                            <form class="text-center" method="post">
+                                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                                <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                                <div class="mb-3"><button class="btn btn-primary d-block w-100" name="submit" type="submit">Login</button></div>
+                                <p class="text-muted">Forgot your password?</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+
     <section  class="position-relative py-4 py-xl-5">
         <div id="home" class="container">
       <form method="post">
         <label for="username">Email:</label>
-        <input type="text" id="username" class="hancie" name="email" placeholder="Email here..." />
+        <input type="text" id="username" name="email" placeholder="Email here..." />
         <label for="password">Password:</label>
-
-
-
-<div class="input-group">
-<input type="password" class="hancie" id="password" name="password" placeholder="Password here..." />
-    <span id="span"><i class="fa fa-eye pb-2 mb-2" id="eye" onclick="toggle()"></i></span>
-  </div>
-        
-<input type="submit" id="submit" name="submit" value="Login">
+        <input type="password" id="password" name="password" placeholder="Password here..." />
+        <input type="submit" id="submit" name="submit" value="Login">
       </form>
       <div class="ear-l"></div>
       <div class="ear-r"></div>
@@ -343,68 +369,10 @@ html{
    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
     </section>
-
-    <!-- ---------------Login Password Show and Hide Icon Script --------------->
-    <script>
-var state= false;
-function toggle(){
-    if(state){
-	document.getElementById("password").setAttribute("type","password");
-	document.getElementById("eye").style.color='#7a797e';
-	state = false;
-     }
-     else{
-	document.getElementById("password").setAttribute("type","text");
-	document.getElementById("eye").style.color='red';
-	state = true;
-     }
-}
-</script>
-
-
-<style>
-
-/* ---------Login Password Show and Hide Icon --------------*/
-::placeholder{
-    color: #9a9a9a;
-    font-weight: 400;
-}
-
-#span{
-    position: absolute;
-    right: 15px;
-    transform: translate(0,-50%);
-    top: 50%;
-    cursor: pointer;
-}
-.fa{
-    font-size: 20px;
-    color: #7a797e;
-}
-
-.hancie{
-    box-sizing: border-box;
-    width: 100%;
-    font-size: 0.95em;
-    font-weight: 400;
-    border: none;
-    padding: 0.6em;
-    border-radius: 3px;
-    font-family: 'Poppins',sans-serif;
-    color: #4a4a4a;
-    border: none;
-    border-bottom: 0.12em solid #3f3554;
-    box-shadow: 0 5px 30px rgba(22,89,233,0.4);
-}
-
-form input:focus {
-  border-color: #ff5959;
-}
-
-/* ------------------------------------------------- */
+    <style>
 
 body {
-  background-color: #fff;
+  background-color: #f4c531;
 }
 .container {
   height: 31.25em;
@@ -417,7 +385,7 @@ body {
 form {
   width: 23.75em;
   height: 18.75em;
-  background-color: #28c7fa;
+  background-color: #ffffff;
   position: absolute;
   transform: translate(-50%, -50%);
   top: calc(50% + 3.1em);
@@ -434,7 +402,18 @@ form label {
   font-weight: 600;
   color: #2e0d30;
 }
-
+form input {
+  font-size: 0.95em;
+  font-weight: 400;
+  color: #3f3554;
+  padding: 0.3em;
+  border: none;
+  border-bottom: 0.12em solid #3f3554;
+  outline: none;
+}
+form input:focus {
+  border-color: #f4c531;
+}
 form input:not(:last-child) {
   margin-bottom: 0.9em;
 }
@@ -444,8 +423,8 @@ form input:not(:last-child) {
   border-radius: 2em;
   border: none;
   outline: none;
-  background-color: #3f3554;
-  color: #fff;
+  background-color: #f4c531;
+  color: #2e0d30;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.15em;

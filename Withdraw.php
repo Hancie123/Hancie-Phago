@@ -40,7 +40,7 @@ header("Location:Login.php");
      $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
      while ($row = mysqli_fetch_array($result)) {
       ?>
-<h1 class="text-light">Rs: <?php echo $row[0] ; ?></h1>
+<h1 class="text-light">Rs <?php echo $row[0] ; ?></h1>
 <?php
       }
       ?>
@@ -192,5 +192,6 @@ while ($row=mysqli_fetch_array($query)) {
           
 
           </div>
+          <br>
 </body>
 </html>

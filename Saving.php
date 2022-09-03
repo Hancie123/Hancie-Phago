@@ -39,7 +39,7 @@ header("Location:Login.php");
      $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
      while ($row = mysqli_fetch_array($result)) {
       ?>
-<h1 class="text-light">Rs: <?php echo $row[0] ; ?></h1>
+<h1 class="text-light">Rs <?php echo $row[0] ; ?></h1>
 <?php
       }
       ?>
@@ -91,7 +91,7 @@ header("Location:Login.php");
 </div>
 </div>
 
-<input type="submit" name="submit" value="Save" class="btn btn-success mb-3">
+<input type="submit" name="submit" value="Deposit Money" class="btn btn-success mb-3 mx-2">
 
 
 </form>
@@ -187,5 +187,6 @@ while ($row=mysqli_fetch_array($query)) {
           
 
           </div>
+          <br>
 </body>
 </html>

@@ -76,7 +76,7 @@ header("Location:Login.php");
 </div>
 </div>
 
-<input type="submit" name="submit" value="Save" class="btn btn-success mb-3">
+<input type="submit" name="submit" value="Save" class="btn btn-success mb-3 mx-2">
 
 
 </form>
@@ -159,5 +159,6 @@ while ($row=mysqli_fetch_array($query)) {
           
 
           </div>
+          <br>
 </body>
 </html>

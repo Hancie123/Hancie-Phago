@@ -99,10 +99,7 @@ div.social-links {
   color: #fff;
 }
 
-#footerparagraph {
-  font-size: 1rem;
-  text-align:justify;
-}
+
 
 </style>
 
@@ -112,23 +109,23 @@ div.social-links {
         <div class="row">
             <div class="col-sm-6 col-md-4 footer-navigation">
                 <h3><a href="#">Hancie <span>Phago</span></a></h3>
-                <p class="links"><a href="https://hancie-phago.com.np/">Home</a><strong> · </strong><a href="https://blog.hancie-phago.com.np/?i=1">Blog</a><strong> · </strong><a href="https://hancie-phago.com.np/Contact_Us">Contact</a><strong> · </strong><a href="https://hancie-phago.com.np/About">About</a><strong> ·  </strong><a href="Login.php">Login</a></p>
+                <p class="links"><a href="index.php">Home</a><strong> · </strong><a href="#">Blog</a><strong> · </strong><a href="#">Contact</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="Login.php">Login</a></p>
                 <p class="company-name">Hancie Phago © <?php echo date("Y"); ?> </p>
             </div>
             <div class="col-sm-6 col-md-4 footer-contacts">
                 <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
-                    <p><span class="new-line-span">Kathmandu</span>New Baneshwor, Shankamul</p>
+                    <p><span class="new-line-span">Kathmandu</span>New Baneshwor</p>
                 </div>
                 <div><i class="fa fa-phone footer-contacts-icon"></i>
-                    <p> <a class="text-light" href="tel: 9825915122">+977 9825915122</a></p>
+                    <p class="footer-center-info email text-start"> +977 9825915122</p>
                 </div>
                 <div><i class="fa fa-envelope footer-contacts-icon"></i>
-                    <p> <a class="text-light" href="mailto:hanciewanemphago@gmail.com">hanciewanemphago@gmail.com</a></p>
+                    <p> <a href="#" target="_blank">hanciewanemphago@gmail.com</a></p>
                 </div>
             </div>
             <div class="col-md-4 footer-about">
-                <h2>About</h2>
-                <p id="footerparagraph" class="text-light"> I sincerely welcome you to my website, visitors. From this page, you are already familiar with my name. 
+                <h4>About</h4>
+                <p class="text-light"> I sincerely welcome you to my website, visitors. From this page, you are already familiar with my name. 
                   I made this website for everyday personal usage. This website serves as both my portfolio and a listing 
                   of all of my qualifications and programming abilities. </p>
                 
@@ -139,7 +136,7 @@ div.social-links {
   
 <div class="footer-copyright">
 <div class="container-fluid bg-dark text-light  text-center p-2">
-<p>Copyright © 2022- <?php echo date("Y"); ?> | All rights reserved | Design by Hancie Phago</p>
+<p>Copyright © 2022- <?php echo date("Y"); ?>. All rights reserved. Design by Hancie Phago</p>
 
 </div>
 </div>

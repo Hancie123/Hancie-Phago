@@ -41,6 +41,8 @@ while($row = mysqli_fetch_array($result))
 </head>
 <body>
 <br>
+
+
 <?php
 if(isset($_POST['view'])){
     include "connection.php";
@@ -53,13 +55,14 @@ if(isset($_POST['view'])){
        ?>
 
 
-<div class="w3-card-4">
+<div id="my-section" class="w3-card-4">
 
 <div class="w3-container bg-success text-light">
-  <h2><?php echo $_SESSION['name'];?> Note's</h2>
+  <h2><?php echo $_SESSION['name'];?> Note's <span><button class="btn btn-danger text-light w3-right my-1" onclick="window.print()">Print</button></span></h2>
+  
 </div>
 <br>
-<div class="w3-container">
+<div  class="w3-container">
 
 
 <div class="w3-cell-row">
@@ -110,7 +113,6 @@ if(isset($_POST['view'])){
 </div>
 
 
-
 <br>
 </form>
 						
@@ -119,6 +121,23 @@ if(isset($_POST['view'])){
 
 
     </div>
+
+
+    <style>
+@media print{
+    body *:not(#my-section):not(#my-section *){
+        visibility: hidden;
+    }
+   
+    span{
+        visibility:hidden;
+    }
+}
+
+
+</style>
+
+
 <?php
     }
 }
