@@ -17,4 +17,6 @@ CREATE TABLE `events` ( `id` int(11) PRIMARY KEY AUTO_INCREMENT, `title` varchar
 
 CREATE TABLE projects (Project_ID int(11) PRIMARY KEY AUTO_INCREMENT, date varchar(255), title varchar(255), category varchar(255),progress varchar(255), status varchar(255), User_ID int(11), FOREIGN KEY(User_ID) REFERENCES users(User_ID));
 
+CREATE TABLE room_expenses (Expenses_ID int(11) PRIMARY KEY AUTO_INCREMENT, Date varchar(255), Deposit varchar(255), Withdraw varchar(255), Remark varchar(255), Status varchar(255), Date2 varchar(255), User_ID int(11), FOREIGN KEY(User_ID) REFERENCES users(User_ID));
+
 

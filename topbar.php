@@ -22,4 +22,8 @@
 </div>
 
 
+<!-- Income dropdown nav -->
+<a href="Room_Expenses_Dashboard" class="w3-bar-item w3-button w3-padding-large text-light">Room Expenses Tracker</a>
+
+
 </div>
