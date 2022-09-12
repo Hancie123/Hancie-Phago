@@ -179,11 +179,66 @@ header("Location:Login.php");
 
 
 
+
+
+<!-- -----------------------------One Row Complete ------------------------------->
+<br>
+
+<div class="w3-container">
+<div class="w3-cell-row">
+
+<div class="w3-container w3-cell w3-mobile my-2">
+
+<div class="card bg-success text-light">
+<h4 class="card-title w3-center mt-3">View Deposit</h4>
+
+<div class="card-body w3-center"><i class='bx bx-collection bx-lg'></i></div>
+<a href="View_Room_Deposit" class="btn btn-dark text-light">View here</a>
+</div>
+</div>
+
+
+
+<div class="w3-container w3-cell w3-mobile my-2">
+
+<div class="card bg-success text-light">
+<h4 class="card-title w3-center mt-3">View Expenses</h4>
+
+<div class="card-body w3-center"><i class='bx bx-collection bx-lg'></i></div>
+<a href="View_Room_Expenses" class="btn btn-dark text-light">View here</a>
+</div>
+</div>
+
+
+<div class="w3-container w3-cell w3-mobile my-2">
+
+<div class="card bg-success text-light">
+<h4 class="card-title w3-center mt-3">View <?php echo date('M');?> Exps</h4>
+
+<div class="card-body w3-center"><i class='bx bx-collection bx-lg'></i></div>
+<a href="Current_Month_Expenses" class="btn btn-dark text-light">View here</a>
+</div>
+</div>
+
+<!-- ---Row Close ----->
+</div>
+
+<!-- ---Container Close ----->
+</div>
+
+
+
+
+
+
+
+
+
 <!-- Chart Section -->
 
 <?php  
 include "connection.php";  
- $query = "SELECT *, SUM(Withdraw) as Total FROM room_expenses Where Status='Withdraw' Group by Date2";  
+ $query = "SELECT *, SUM(Withdraw) as Total FROM room_expenses Where Status='Withdraw' Group by Date";  
  $result = mysqli_query($conn, $query);  
  ?>  
 
@@ -202,7 +257,7 @@ include "connection.php";
 <?php  
 while($row = mysqli_fetch_array($result))  
  {  
-  echo "['".$row["Date2"]."', ".$row["Total"]."],";  
+  echo "['".$row["Date"]."', ".$row["Total"]."],";  
    }  
  ?> 
         ]);

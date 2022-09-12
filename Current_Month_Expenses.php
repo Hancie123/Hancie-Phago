@@ -43,17 +43,14 @@ header("Location:Login.php");
 <!-- Daily Expenses Table -->
 <br>
 <div id="my-section">
-<h2 class="text-center text-dark"><span class="w3-left"><button id="printPageButton" class="btn btn-danger"onClick="window.print();">Print Statement</button></span>Room Expenses Statement</h2><br>
-<table id="hancie" class="table table-borderless table-hover">
+<h2 class="text-center text-dark"><span class="w3-left"><button id="printPageButton" class="btn btn-danger"onClick="window.print();">Print Statement</button></span><?php echo date('F Y');?> Room Expenses Report</h2><br>
+<table  class="table table-borderless table-hover">
 <thead class="bg-success text-light">
 <tr>
 <th>Expense ID</th>
 <th>Date</th>
-<th>Credit</th>
-<th>Debit</th>
+<th>Expenses</th>
 <th>Remarks</th>
-<th>Balance</th>
-
 </tr>
 </thead>
 <tbody>
@@ -62,7 +59,7 @@ include "connection.php";
 
 $id=$_SESSION['id'];
 
-$sql="SELECT * , SUM(Deposit)-SUM(Withdraw) as Result FROM room_expenses  WHERE User_ID='$id' GROUP BY Date2 ORDER BY Expenses_ID";
+$sql="SELECT * FROM room_expenses  WHERE User_ID='$id' AND MONTH(Date2) =Month(now()) and YEAR(Date2)=Year(now()) AND Status='Withdraw' GROUP BY Date2 ORDER BY Expenses_ID";
 
 $query=mysqli_query($conn, $sql);
 
@@ -72,10 +69,9 @@ while ($row=mysqli_fetch_array($query)) {
 <tr>
   <td> <?php echo $row['Expenses_ID'];?></td>
   <td> <?php echo $row['Date'];?></td>
-  <td> <?php echo $row['Deposit'];?></td>
-  <td> <?php echo $row['Withdraw'];?></td>
+  <td> Rs. <?php echo $row['Withdraw'];?></td>
   <td> <?php echo $row['Remark'];?></td>
-  <td ></td>
+  
 
   
 
@@ -89,33 +85,12 @@ while ($row=mysqli_fetch_array($query)) {
 
 ?>
 
-<tr>
-    <td colspan="5"></td>
-    <td  class="text-right"><?php 
-   $id=$_SESSION['id'];
-    include "connection.php";   
-    $query = "SELECT SUM(Deposit)-SUM(Withdraw) as Result from room_expenses WHERE User_ID='$id' ";
-     $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
-     while ($row = mysqli_fetch_array($result)) {
-      ?>
-<h5 class="text-danger">Rs. <?php echo $row['Result'] ; ?></h5>
-<?php
-      }
-      ?></td>
-  </tr>
 
 
 </table>
     </div>
 
-<script>
-  $(document).ready(function() {
-$('#hancie').DataTable( {
-"lengthMenu": [[100, 50, 25], [100, 50, 25]]
-} );
-} );
 
-  </script>
           
 
         

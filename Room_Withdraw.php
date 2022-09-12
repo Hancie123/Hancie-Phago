@@ -50,7 +50,7 @@ header("Location:Login.php");
 <br>
 
 
-<form action="function_saving.php" method="post" >
+<form action="function_room_expenses.php" method="post" >
 <div class="w3-cell-row">
 
 <div class="w3-container w3-cell w3-mobile">
@@ -68,6 +68,9 @@ header("Location:Login.php");
 
 <div class="w3-container w3-cell w3-mobile">
 
+<label class="form-label" for="firstname">Current Month:</label>
+<input type="text" class="form-control" name="date3" id="amount" value="<?php echo date('F Y');?>" required readonly>
+<br>
 
 
 <label class="form-label" for="firstname">Remark:</label>

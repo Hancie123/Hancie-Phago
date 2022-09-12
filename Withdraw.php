@@ -33,7 +33,7 @@ header("Location:Login.php");
    <label class="text-light h4" >Current Balance:</label>
 
    <?php 
-   session_start();
+   
    $id=$_SESSION['id'];
     include "connection.php";   
     $query = "SELECT SUM(Amount)-SUM(Withdraw) as Result from saving WHERE User_ID='$id' ";
