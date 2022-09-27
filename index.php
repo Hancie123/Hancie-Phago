@@ -7,9 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hancie Phago</title>
     <link rel="icon" href="/Logo.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <meta name="description" content="Hancie Phago Personal Website">
     <meta name="keywords" content="Hancie Phago, Hancie, Phago, Nitesh Hamal, Personal Website">
     <meta name="author" content="Hancie Phago">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hancie-phago.com.np/">
+    <meta property="og:title" content="Hancie Phago | Personal Website ">
+    <meta property="og:description" content="Hancie Phago is a personal website with all personal management system">
+    <meta property="og:image" content="https://hancie-phago.com.np/Logo.ico">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="/Logo.ico">
+    <meta property="twitter:url" content="https://hancie-phago.com.np/">
+    <meta property="twitter:title" content="Hancie Phago | Personal Website ">
+    <meta property="twitter:description" content="Hancie Phago is a personal website with all personal management system">
+    <meta property="twitter:image" content="https://hancie-phago.com.np/Logo.ico">
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -90,13 +112,13 @@
     <div class="container py-4 py-xl-5">
         <div class="row gy-4 gy-md-0">
             <div class="col-md-6">
-                <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="Images/Hancie-Phago.png"></div>
+                <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="Images/Hancie-Phago.png" loading="lazy"></div>
             </div>
             <div class="col-md-6 d-md-flex align-items-md-center">
                 <div style="max-width: 350px;">
                     <h2 class="text-uppercase fw-bold">Hancie Phago</h2>
                     <p class="text-uppercase">Software Developer</p>
-                    <p class="my-3">Hello! My name is Hancie Phago. I am a software developer and currently
+                    <p class="my-3" >Hello! My name is Hancie Phago. I am a software developer and currently
 studying software engineering at PCPS College. Visit my website if you'd like to get in touch 
 with me.</p><a href="tel: 9825915122" class="btn btn-lg">
                 <span>CONTACT ME</span>
@@ -165,8 +187,8 @@ with me.</p><a href="tel: 9825915122" class="btn btn-lg">
                     <div class="card-container-imagia">
                         <div class="card-imagia">
                             <div class="front-imagia">
-                                <div class="cover-imagia"><img alt="" src="https://unsplash.it/720/500?image=1067"></div>
-                                <div class="user-imagia"><img class="img-circle" alt="" src="Images/Hancie-Phago.jpg"></div>
+                                <div class="cover-imagia"><img alt="" src="https://unsplash.it/720/500?image=1067" loading="lazy"></div>
+                                <div class="user-imagia"><img class="img-circle" alt="" src="Images/Hancie-Phago.jpg" loading="lazy"></div>
                                 <div class="content-imagia">
                                     <h3 class="name-imagia">Hancie Phago</h3>
                                     <p class="subtitle-imagia">Software Developer</p>
@@ -202,8 +224,8 @@ with me.</p><a href="tel: 9825915122" class="btn btn-lg">
                     <div class="card-container-imagia">
                         <div class="card-imagia">
                             <div class="front-imagia">
-                                <div class="cover-imagia"><img alt="" src="https://unsplash.it/720/500?image=1067"></div>
-                                <div class="user-imagia"><img class="img-circle" alt="" src="Images/Nitesh.JPG"></div>
+                                <div class="cover-imagia"><img alt="" src="https://unsplash.it/720/500?image=1067" loading="lazy"></div>
+                                <div class="user-imagia"><img class="img-circle" alt="" src="Images/Nitesh.JPG" loading="lazy"></div>
                                 <div class="content-imagia">
                                     <h3 class="name-imagia">Nitesh Hamal</h3>
                                     <p class="subtitle-imagia">Software Developer</p>
@@ -405,7 +427,7 @@ $(document).ready(function(){
 <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
 
 <div id="column" class="col p-2">
-        <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/Om-Kalpataru-Carriers.jpeg">
+        <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/Om-Kalpataru-Carriers.jpeg" loading="lazy">
             <div class="py-4">
                 <h4>Om Kalpataru Carriers</h4>
                 <p>Om Kalpataru Carriers Pvt.Ltd is a transport company company of Nepal
@@ -420,7 +442,7 @@ $(document).ready(function(){
     </div>
 
     <div id="column" class="col p-2">
-                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/Web-Application.jpg">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/Web-Application.jpg" loading="lazy">
                     <div class="py-4">
                         <h4>Naindra Tea Farming</h4>
                         <p>A online program called Naindra Tea Farming keeps track of all the tea records. The data is collected 
@@ -431,7 +453,7 @@ $(document).ready(function(){
             </div>
 
             <div id="column" class="col p-2">
-                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/Website.jpg">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/Website.jpg" loading="lazy">
                     <div class="py-4">
                         <h4 >Hancie e-Learning Studio</h4>
                         <p>A web application called Hancie e-Learning Studio aids in improving one's knowledge and abilities 
@@ -447,7 +469,7 @@ $(document).ready(function(){
 
 <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
 <div id="column" class="col p-2">
-                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/Dictionary.jpg">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/Dictionary.jpg" loading="lazy">
                     <div class="py-4">
                         <h4 >NH English Dictionary</h4>
                         <p>The website NH English Dictionary offers word definitions and 
@@ -461,7 +483,7 @@ $(document).ready(function(){
 
 
             <div id="column" class="col p-2">
-                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/Health.jpeg">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/Health.jpeg" loading="lazy">
                     <div class="py-4">
                         <h4 >Hamro Nepali Health</h4>
                         <p>Nepal Kids Health will provide comprehensive health information and 
@@ -483,7 +505,7 @@ $(document).ready(function(){
       <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
 
       <div id="column" class="col p-2">
-                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/Desktop-Application.jpg">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/Desktop-Application.jpg" loading="lazy">
                     <div class="py-4">
                         <h4 >Luton Online Hotel Booking</h4>
                         <p >The desktop program Luton Online Hotel Booking System enables customers to make online GUI-based 
@@ -495,7 +517,7 @@ $(document).ready(function(){
             </div>
 
             <div id="column" class="col p-2">
-                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/NH Dictionary.jpg">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/NH Dictionary.jpg" loading="lazy">
                     <div class="py-4">
                         <h4>NH Nepali Dictionary</h4>
                         <p>Find out the meaning of English words or phrases in the Nepali language and vice-versa. Search for 
@@ -507,7 +529,7 @@ $(document).ready(function(){
 
 
             <div id="column" class="col p-2">
-                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/NH Library Management System.png">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/NH Library Management System.png" loading="lazy">
                     <div class="py-4">
                         <h4>NH Library Mangement System</h4>
                         <p>This specialized application offers an advanced library management system, which carries an 
@@ -524,7 +546,7 @@ $(document).ready(function(){
 
 <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
 <div id="column" class="col p-2">
-                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/NH Hotel Management 5467576.png">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 40vh;" src="Images/NH Hotel Management 5467576.png" loading="lazy">
                     <div class="py-4">
                         <h4>NH Hotel Mangement System</h4>
                         <p>NH Hotel management application software for your hotel rooms and enjoy the automation of your hotel 

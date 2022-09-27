@@ -2,9 +2,18 @@
 <?php 
 
 session_start();
+$currentTime = time();
+
 if(!isset($_SESSION['email'])){
-header("Location:Login.php");
+header("Location:Login");
 }
+else {
+  $currentTime = time();
+  if($currentTime > $_SESSION['expire']) {
+    session_unset();
+    session_destroy();
+    header('location:Login');
+  }
 
 ?>
 <!DOCTYPE html>

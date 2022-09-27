@@ -59,7 +59,7 @@ include "connection.php";
 
 $id=$_SESSION['id'];
 
-$sql="SELECT * FROM room_expenses  WHERE User_ID='$id' AND MONTH(Date2) =Month(now()) and YEAR(Date2)=Year(now()) AND Status='Withdraw' GROUP BY Date2 ORDER BY Expenses_ID";
+$sql="SELECT * FROM room_expenses  WHERE User_ID='$id' AND MONTH(Date2) =Month(now()) and YEAR(Date2)=Year(now()) AND Status='Withdraw' GROUP BY Date2 ORDER BY Expenses_ID DESC";
 
 $query=mysqli_query($conn, $sql);
 

@@ -29,170 +29,112 @@ header("Location:Login.php");
 
 <br>
 
-<div id="container" class="w3-card-4 ">
-
-<br>
-
 <div class="w3-container">
 <div class="w3-cell-row">
 
-<div class="w3-container w3-cell w3-mobile mb-3">
-<div class="w3-card-4">
-    <header class="w3-container bg-success">
-      <h2 class="text-light">Total Expenses</h2>
-    </header>
+<div class="w3-container w3-cell w3-mobile my-2">
 
-    <div class="w3-container py-3">
-      
-    <div class="w3-cell-row">
+<div class="card bg-success text-light">
+<h4 class="card-title w3-center mt-3">Total Expenses</h4>
 
-    <!-- One Container -->
-  <div class="w3-container  w3-cell w3-mobile">
-  <i class='bx bx-money bx-lg'></i>
-  </div>
-
-  <div class="w3-container w3-cell w3-mobile"><h2>Rs:</h2>
-  <?php 
+<div class="card-body w3-center"><?php 
+   $id=$_SESSION['id'];
     include "connection.php";
-    $id=$_SESSION['id'];
+
+
     $query = "SELECT SUM(amount) as Amount FROM daily_expenses WHERE User_ID='$id'";
      $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
      while ($row = mysqli_fetch_array($result)) {
-      echo "<h1> $row[0] </h1>";
-      }
       ?>
-  </div>
-
-
-</div>
-    </div>
-
-    <footer class="w3-container bg-success">
-      <a href="" class="text-center text-light ">View <i class='bx bxs-right-arrow-circle' ></i></a>
-    </footer>
-  </div>
-</div>
-
-
-<div class="w3-container w3-cell w3-mobile mb-3">
-<div class="w3-card-4">
-    <header class="w3-container bg-success">
-      <h2 class="text-light">Today's Expenses</h2>
-    </header>
-
-    <div class="w3-container py-3">
-      
-    <div class="w3-cell-row">
-
-    <!-- One Container -->
-  <div class="w3-container  w3-cell w3-mobile">
-  <i class='bx bx-money bx-lg'></i>
-  </div>
-
-  <div class="w3-container w3-cell w3-mobile"><h2>Rs:</h2>
-  <?php 
-    include "connection.php";  
-    $id=$_SESSION['id']; 
-    $query = "select SUM(amount) as Amount from daily_expenses where User_ID='$id' AND DATE(date2)=CURDATE();";
-     $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
-     while ($row = mysqli_fetch_array($result)) {
-      echo "<h1> $row[0] </h1>";
+<h1 class="text-light">Rs. <?php echo $row['Amount'] ; ?></h1>
+<?php
       }
-      ?>
-  </div>
-
-
+      ?></div>
+<a href="Daily_Expenses" class="btn btn-dark text-light">View here</a>
 </div>
-    </div>
-
-    <footer class="w3-container bg-success">
-      <a href="" class="text-center text-light">View <i class='bx bxs-right-arrow-circle' ></i></a>
-    </footer>
-  </div>
 </div>
 
-<div class="w3-container w3-cell w3-mobile mb-3">
-<div class="w3-card-4">
-    <header class="w3-container bg-success">
-      <h2 class="text-light">Total Loans</h2>
-    </header>
 
-    <div class="w3-container py-3">
-      
-    <div class="w3-cell-row">
 
-    <!-- One Container -->
-  <div class="w3-container  w3-cell w3-mobile">
-  <i class='bx bx-money bx-lg'></i>
-  </div>
+<div class="w3-container w3-cell w3-mobile my-2">
 
-  <div class="w3-container w3-cell w3-mobile"><h2>Rs:</h2>
-  <?php 
+<div class="card bg-success text-light">
+<h4 class="card-title w3-center mt-3">Saving Money</h4>
+<div class="card-body w3-center"><?php 
+   $id=$_SESSION['id'];
     include "connection.php";
-    $id=$_SESSION['id']; 
-    $query = "SELECT SUM(Amount) FROM loan WHERE User_ID='$id'";
+    $query = "SELECT SUM(Amount)-SUM(Withdraw) as Result from saving WHERE User_ID='$id'";
      $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
      while ($row = mysqli_fetch_array($result)) {
-      echo "<h1> $row[0] </h1>";
-      }
       ?>
-  </div>
-
-
+<h1 class="text-light">Rs. <?php echo $row['Result'] ; ?></h1>
+<?php
+}?></div>
+<a href="Saving" class="btn btn-dark text-light">View here</a>
 </div>
-    </div>
-
-    <footer class="w3-container bg-success">
-      <a href="" class="text-center text-light">View <i class='bx bxs-right-arrow-circle' ></i></a>
-    </footer>
-  </div>
 </div>
 
 
-<div class="w3-container w3-cell w3-mobile mb-3">
-<div class="w3-card-4">
-    <header class="w3-container bg-success">
-      <h2 class="text-light">Total Saving</h2>
-    </header>
 
-    <div class="w3-container py-3">
-      
-    <div class="w3-cell-row">
 
-    <!-- One Container -->
-  <div class="w3-container  w3-cell w3-mobile">
-  <i class='bx bx-chat bx-lg' ></i>
-  </div>
-
-  <div class="w3-container w3-cell w3-mobile"><h2>Rs:</h2>
-  <?php 
+<div class="w3-container w3-cell w3-mobile my-2">
+<div class="card bg-success text-light">
+<h4 class="card-title w3-center mt-3">Lend Money</h4>
+<div class="card-body w3-center"><?php 
+   $id=$_SESSION['id'];
     include "connection.php";
-    $id=$_SESSION['id'];
-    $query = "SELECT SUM(Amount) FROM saving WHERE User_ID='$id'";
+    $query = "SELECT SUM(Amount) FROM loan WHERE User_ID='$id' and Status='Due'";
      $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
      while ($row = mysqli_fetch_array($result)) {
-      echo "<h1> $row[0] </h1>";
-      }
       ?>
-  </div>
-
-
-</div>
-    </div>
-
-    <footer class="w3-container bg-success">
-      <a href="" class="text-center text-light">View <i class='bx bxs-right-arrow-circle' ></i></a>
-    </footer>
-  </div>
-</div>
-
+<h1 class="text-light">Rs. <?php echo $row['0'] ; ?></h1>
+<?php
+}?></div>
+<a href="Loan_Borrow" class="btn btn-dark text-light">View here</a>
 </div>
 </div>
-<br>
 
+
+
+
+<div class="w3-container w3-cell w3-mobile my-2">
+<div class="card bg-success text-light">
+<h4 class="card-title w3-center mt-3"> Room Balance</h4>
+<div class="card-body w3-center"><?php 
+   $id=$_SESSION['id'];
+    include "connection.php";
+    $query = "SELECT SUM(Deposit)-SUM(Withdraw) as Result from room_expenses WHERE User_ID='$id'";
+     $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+     while ($row = mysqli_fetch_array($result)) {
+      ?>
+<h1 class="text-light">Rs. <?php echo $row['Result'] ; ?></h1>
+<?php
+}?></div>
+<a href="Room_Expenses_Dashboard" class="btn btn-dark text-light">View here</a>
+</div>
+</div>
+
+<!-- ---Row Close ----->
+</div>
+
+<!-- ---Container Close ----->
 </div>
 
 
+
+<!-- -----------------------------Pie Chart------------------------------------------------- -->
+
+<style>
+#card {
+    border-radius: 2rem;
+}
+
+#heading {
+    
+    border-radius:  2rem  2rem 0rem 0rem ;
+}
+
+</style>
 
 <!-- Daily Expenses Pie Chart -->
 <?php  
@@ -204,9 +146,9 @@ $id=$_SESSION['id'];
 
 
 <br>
-<div class="w3-card-4">
+<div id="card" class="w3-container shadow-lg m-0 p-0">
 
-<div class="w3-container bg-success text-light">
+<div id="heading" class="w3-container bg-success text-light">
   <h2>Daily Expenses Analysis</h2>
 </div>
 <br>
@@ -239,7 +181,7 @@ while($row = mysqli_fetch_array($result))
  
     <div class="w3-container" id="piechart_3d" style="width: 100%; height: 50vh;"></div>
 
-
+    <br>
 <!-- 
 Row Close -->
     </div>
@@ -260,9 +202,9 @@ $id=$_SESSION['id'];
 
  
 <br>
-<div class="w3-card-4">
+<div id="card" class="w3-container shadow-lg m-0 p-0">
 
-<div class="w3-container bg-success text-light">
+<div id="heading" class="w3-container bg-success text-light">
   <h2>Total Saving Analysis</h2>
 </div>
 <br>
@@ -295,7 +237,7 @@ while($row = mysqli_fetch_array($result))
  
     <div class="w3-container" id="pie" style="width: 100%; height: 50vh;"></div>
 
-
+<br>
 <!-- 
 Row Close -->
     </div>

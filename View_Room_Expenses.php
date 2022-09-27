@@ -82,7 +82,7 @@ if(ISSET($_POST['search1'])){
 $remark=$_POST['remark'];
 include "connection.php";
 $id=$_SESSION['id'];
-$query=mysqli_query($conn, "SELECT * , SUM(Withdraw) as Result1 FROM room_expenses  WHERE User_ID='$id' AND Status='Withdraw' GROUP BY Date2 ORDER BY Expenses_ID") or 
+$query=mysqli_query($conn, "SELECT * , SUM(Withdraw) as Result1 FROM room_expenses  WHERE User_ID='$id' AND Status='Withdraw' GROUP BY Date2 ORDER BY Expenses_ID DESC") or 
 die(mysqli_error());
 $row=mysqli_num_rows($query);
 
@@ -93,7 +93,7 @@ while($fetch=mysqli_fetch_array($query)){
 <tr>
   <td> <?php echo $fetch['Expenses_ID'];?></td>
   <td> <?php echo $fetch['Date'];?></td>
-  <td> <?php echo $fetch['Withdraw'];?></td>
+  <td>Rs. <?php echo $fetch['Withdraw'];?></td>
   <td> <?php echo $fetch['Remark'];?></td>
   
 
@@ -101,12 +101,15 @@ while($fetch=mysqli_fetch_array($query)){
 
 
 
-
 <?php
 
 
 
+
+
 }
+
+
 
 
 
@@ -118,7 +121,7 @@ while($fetch=mysqli_fetch_array($query)){
 
 ?>
   
-
+  
  
 </tbody>
 
@@ -126,7 +129,7 @@ while($fetch=mysqli_fetch_array($query)){
 
 
 </div> 
-
+<br>
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

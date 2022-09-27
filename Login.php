@@ -27,6 +27,9 @@ $_SESSION['email'] =$row['Email'];
 $_SESSION['address'] =$row['Address'];
 $_SESSION['password'] =$row['Password'];
 
+$_SESSION['start'] = time();
+$_SESSION['expire'] = $_SESSION['start'] + (30*60 * 60);
+
 
 header("Location: Home");
 

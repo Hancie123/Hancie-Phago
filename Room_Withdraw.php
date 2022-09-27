@@ -79,7 +79,7 @@ header("Location:Login.php");
 </div>
 </div>
 
-<input type="submit" name="room_withdraw" value="Deposit Money" class="btn btn-success mb-3 mx-5">
+<input type="submit" name="room_withdraw" value="Withdraw Money" class="btn btn-success mb-3 mx-5">
 
 
 </form>
@@ -139,7 +139,7 @@ while ($row=mysqli_fetch_array($query)) {
   <th>
 
 
-<form action="function_saving.php" method="post">
+<form action="function_room_expenses.php" method="post">
 <input type="hidden" value="<?php echo $row['Expenses_ID']; ?> " name="id">
 <button name="room_withdraw_delete" class="btn btn-danger"><i class="bi bi-trash3"></i>
 </form>

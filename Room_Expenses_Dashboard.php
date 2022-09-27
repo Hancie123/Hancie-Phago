@@ -237,8 +237,9 @@ header("Location:Login.php");
 <!-- Chart Section -->
 
 <?php  
+$id=$_SESSION['id'];
 include "connection.php";  
- $query = "SELECT *, SUM(Withdraw) as Total FROM room_expenses Where Status='Withdraw' Group by Date";  
+ $query = "SELECT *, SUM(Withdraw) as Total FROM room_expenses Where User_ID='$id' Group by Date DESC";  
  $result = mysqli_query($conn, $query);  
  ?>  
 
@@ -253,7 +254,7 @@ include "connection.php";
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Total'],  
+          ['Date','Room Expenses'],  
 <?php  
 while($row = mysqli_fetch_array($result))  
  {  
@@ -278,13 +279,14 @@ while($row = mysqli_fetch_array($result))
     <div class="w3-container" id="curve_chart" style="width: 100%; height: 50vh;"></div>
 
 
-<!-- 
-Row Close -->
-    </div>
+
+
 
 
 
 <br>
+
+
 
 
 
